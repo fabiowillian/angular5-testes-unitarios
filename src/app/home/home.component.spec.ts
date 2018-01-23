@@ -22,4 +22,24 @@ describe('HomeComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it ('deve incrementar o valor do número', () => {
+    component.numero = 0;
+    component.aumentar();
+
+    expect(component.numero).toBe(1);
+  });
+
+  it('deve decrementar o valor do número', () => {
+    component.numero = 1;
+    component.diminuir();
+
+    expect(component.numero).toBe(0);
+  });
+
+  it('deve manter o número com um valor igual ou maior que zero', () => {
+    component.numero = 0;
+    component.diminuir();
+    expect(component.numero).toBe(0);
+  });
 });

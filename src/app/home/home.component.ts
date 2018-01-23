@@ -19,7 +19,9 @@ export class HomeComponent implements OnInit {
   }
 
   diminuir() {
-    this.numero--;
+    if (this.numero > 0) {
+      this.numero--;
+    }
   }
 
 }
